@@ -163,7 +163,7 @@
         const startAction = () => {
             document.getElementById('splash').style.opacity = '0';
             setTimeout(() => document.getElementById('splash').style.display = 'none', 1200);
-            document.getElementById('ambient-loop').volume = 0.1;
+            document.getElementById('ambient-loop').volume = 0.05;
             document.getElementById('ambient-loop').play();
             renderPage();
         };
@@ -194,7 +194,7 @@
 
                 if(data.sfx) {
                     eventSfx.src = data.sfx;
-                    eventSfx.volume = 0.2;
+                    eventSfx.volume = 0.05;
                     eventSfx.play();
                 }
 
