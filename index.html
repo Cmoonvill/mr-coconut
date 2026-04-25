@@ -118,26 +118,26 @@
         </div>
     </div>
 
-    <audio id="ambient-loop" loop src="ocean.mp3"></audio>
-    <audio id="flip-sfx" src="flip.mp3"></audio>
+    <audio id="ambient-loop" loop src="ocean.mp3?v=1"></audio>
+    <audio id="flip-sfx" src="flip.mp3?v=1"></audio>
     <audio id="event-sfx"></audio>
 
     <script>
         const bookData = [
-            { file: "Cover.jpg", audio: "page0.mp3", text: `Mr. Coconut. By Alejandro A. Luna. Illustrated by Dad.` },
-            { file: "2-3.jpg", audio: "page1.mp3", text: `In the middle of the big, blue ocean, on a teeny, tiny island, lived Mr. Coconut. His home was the tallest, curviest palm tree right on the edge of the sand.` },
-            { file: "4-5.jpg", audio: "page2.mp3", text: `Mr. Coconut's favorite thing in the whole world was sitting on the top branch. From up there, he could see the whales spouting and the clouds changing shape. He dreamed of sailing away on big adventures.`, sfx: 'whale.mp3' },
-            { file: "6-7.jpg", audio: "page3.mp3", text: `But one day, the wind didn't whisper. It HOWLED. The palm tree swung left. Then RIGHT.`, sfx: 'wind.mp3' },
-            { file: "8-9.jpg", audio: "page4.mp3", text: `WHOOOOOSH! Mr. Coconut lost his grip. BUMP! BUMP! THUMP! He landed upside down in the sand. "Oh, phooey," he sighed.`, sfx: 'thump.mp3', shake: true },
-            { file: "10-11.jpg", audio: "page5.mp3", text: `Mr. Coconut tried to climb the trunk. He took one step up. Sliiiide. Back down he went. The tree was too tall. The trunk was too slippery. He missed his view.` },
-            { file: "12-13.jpg", audio: "page6.mp3", text: `Just as a tear was forming in his eye, click-clack-click-clack. Out from a tide pool scuttled Ms. Kind-Crab. She was wearing a little piece of sea glass on her back like a backpack.`, sfx: 'crab.mp3' },
-            { file: "14-15.jpg", audio: "page7.mp3", text: `"Why the long face, Mr. Nut?" she asked. (She always got his name wrong). "I've fallen and I can't get back up," said Mr. Coconut. Ms. Kind-Crab snapped her claws. "I have an idea!"` },
-            { file: "16-17.jpg", audio: "page8.mp3", text: `Pinch. Ms. Kind-Crab grabbed a frond. Scuttle. She climbed up the tree sideways. Snip. She cut a long, strong vine.` },
-            { file: "18-19.jpg", audio: "page9.mp3", text: `She tied one end of the vine around Mr. Coconut's middle. She threw the other end over the highest branch. "Pull!" she shouted. Mr. Coconut pulled. Ms. Crab pulled. Slowly... slowly...` },
-            { file: "20-21.jpg", audio: "page10.mp3", text: `PLOP! Mr. Coconut landed right back on his favorite spot. The sea was still there. The sky was still there. But something felt different. Better.`, sfx: 'sparkle.mp3' },
-            { file: "22-23.jpg", audio: "page11.mp3", text: `Oh my," whispered Ms. Kind-Crab. "I've never seen the ocean from up here. It's... it's so big." Mr. Coconut smiled. "Would you like to stay and watch it with me?"` },
-            { file: "24-25.jpg", audio: "page12.mp3", text: `And so they sat. Mr. Coconut didn't just dream of adventures anymore. He dreamed of adventures with a friend. And that, he realized, was the very best kind of dream.` },
-            { file: "Back Cover.jpg", audio: "page13.mp3", text: `Sometimes you need a little help from a friend to get back to where you belong. The End. Thank you for reading Mr. Coconut! SHARP Moon Studio 2026` }
+            { file: "Cover.jpg", audio: "page0.mp3?v=1", text: `Mr. Coconut. By Alejandro A. Luna. Illustrated by Dad.` },
+            { file: "2-3.jpg", audio: "page1.mp3?v=1", text: `In the middle of the big, blue ocean, on a teeny, tiny island, lived Mr. Coconut. His home was the tallest, curviest palm tree right on the edge of the sand.` },
+            { file: "4-5.jpg", audio: "page2.mp3?v=1", text: `Mr. Coconut's favorite thing in the whole world was sitting on the top branch. From up there, he could see the whales spouting and the clouds changing shape. He dreamed of sailing away on big adventures.`, sfx: 'whale.mp3' },
+            { file: "6-7.jpg", audio: "page3.mp3?v=1", text: `But one day, the wind didn't whisper. It HOWLED. The palm tree swung left. Then RIGHT.`, sfx: 'wind.mp3' },
+            { file: "8-9.jpg", audio: "page4.mp3?v=1", text: `WHOOOOOSH! Mr. Coconut lost his grip. BUMP! BUMP! THUMP! He landed upside down in the sand. "Oh, phooey," he sighed.`, sfx: 'thump.mp3', shake: true },
+            { file: "10-11.jpg", audio: "page5.mp3?v=1", text: `Mr. Coconut tried to climb the trunk. He took one step up. Sliiiide. Back down he went. The tree was too tall. The trunk was too slippery. He missed his view.` },
+            { file: "12-13.jpg", audio: "page6.mp3?v=1", text: `Just as a tear was forming in his eye, click-clack-click-clack. Out from a tide pool scuttled Ms. Kind-Crab. She was wearing a little piece of sea glass on her back like a backpack.`, sfx: 'crab.mp3' },
+            { file: "14-15.jpg", audio: "page7.mp3?v=1", text: `"Why the long face, Mr. Nut?" she asked. (She always got his name wrong). "I've fallen and I can't get back up," said Mr. Coconut. Ms. Kind-Crab snapped her claws. "I have an idea!"` },
+            { file: "16-17.jpg", audio: "page8.mp3?v=1", text: `Pinch. Ms. Kind-Crab grabbed a frond. Scuttle. She climbed up the tree sideways. Snip. She cut a long, strong vine.` },
+            { file: "18-19.jpg", audio: "page9.mp3?v=1", text: `She tied one end of the vine around Mr. Coconut's middle. She threw the other end over the highest branch. "Pull!" she shouted. Mr. Coconut pulled. Ms. Crab pulled. Slowly... slowly...` },
+            { file: "20-21.jpg", audio: "page10.mp3?v=1", text: `PLOP! Mr. Coconut landed right back on his favorite spot. The sea was still there. The sky was still there. But something felt different. Better.`, sfx: 'sparkle.mp3' },
+            { file: "22-23.jpg", audio: "page11.mp3?v=1", text: `Oh my," whispered Ms. Kind-Crab. "I've never seen the ocean from up here. It's... it's so big." Mr. Coconut smiled. "Would you like to stay and watch it with me?"` },
+            { file: "24-25.jpg", audio: "page12.mp3?v=1", text: `And so they sat. Mr. Coconut didn't just dream of adventures anymore. He dreamed of adventures with a friend. And that, he realized, was the very best kind of dream.` },
+            { file: "Back Cover.jpg", audio: "page13.mp3?v=1", text: `Sometimes you need a little help from a friend to get back to where you belong. The End. Thank you for reading Mr. Coconut! SHARP Moon Studio 2026` }
         ];
 
         let currentIndex = 0;
