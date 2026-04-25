@@ -167,7 +167,7 @@
     const ocean = document.getElementById('ambient-loop');
     ocean.play();
     // Re-assert volume IMMEDIATELY after play for iOS
-    ocean.volume = 0.1; 
+    ocean.volume = 0.5; 
     
     renderPage();
         };
@@ -200,7 +200,7 @@
             eventSfx.src = data.sfx;
             eventSfx.play();
             // Force the volume again for the iPad
-            eventSfx.volume = 0.1;
+            eventSfx.volume = 0.5;
                 }
 
                 speak();
