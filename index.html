@@ -125,20 +125,20 @@
 
     <script>
         const bookData = [
-            { file: "Cover.jpg", text: `Mr. Coconut. By Alejandro A. Luna. Illustrated by Dad.` },
-            { file: "2-3.jpg", text: `In the middle of the big, blue ocean, on a teeny, tiny island, lived Mr. Coconut. His home was the tallest, curviest palm tree right on the edge of the sand.` },
-            { file: "4-5.jpg", text: `Mr. Coconut's favorite thing in the whole world was sitting on the top branch. From up there, he could see the whales spouting and the clouds changing shape. He dreamed of sailing away on big adventures.`, sfx: 'whale.mp3' },
-            { file: "6-7.jpg", text: `But one day, the wind didn't whisper. It HOWLED. The palm tree swung left. Then RIGHT.`, sfx: 'wind.mp3' },
-            { file: "8-9.jpg", text: `WHOOOOOSH! Mr. Coconut lost his grip. BUMP! BUMP! THUMP! He landed upside down in the sand. "Oh, phooey," he sighed.`, sfx: 'thump.mp3', shake: true },
-            { file: "10-11.jpg", text: `Mr. Coconut tried to climb the trunk. He took one step up. Sliiiide. Back down he went. The tree was too tall. The trunk was too slippery. He missed his view.` },
-            { file: "12-13.jpg", text: `Just as a tear was forming in his eye, click-clack-click-clack. Out from a tide pool scuttled Ms. Kind-Crab. She was wearing a little piece of sea glass on her back like a backpack.`, sfx: 'crab.mp3' },
-            { file: "14-15.jpg", text: `"Why the long face, Mr. Nut?" she asked. (She always got his name wrong). "I've fallen and I can't get back up," said Mr. Coconut. Ms. Kind-Crab snapped her claws. "I have an idea!"` },
-            { file: "16-17.jpg", text: `Pinch. Ms. Kind-Crab grabbed a frond. Scuttle. She climbed up the tree sideways. Snip. She cut a long, strong vine.` },
-            { file: "18-19.jpg", text: `She tied one end of the vine around Mr. Coconut's middle. She threw the other end over the highest branch. "Pull!" she shouted. Mr. Coconut pulled. Ms. Crab pulled. Slowly... slowly...` },
-            { file: "20-21.jpg", text: `PLOP! Mr. Coconut landed right back on his favorite spot. The sea was still there. The sky was still there. But something felt different. Better.`, sfx: 'sparkle.mp3' },
-            { file: "22-23.jpg", text: `Oh my," whispered Ms. Kind-Crab. "I've never seen the ocean from up here. It's... it's so big." Mr. Coconut smiled. "Would you like to stay and watch it with me?"` },
-            { file: "24-25.jpg", text: `And so they sat. Mr. Coconut didn't just dream of adventures anymore. He dreamed of adventures with a friend. And that, he realized, was the very best kind of dream.` },
-            { file: "Back Cover.jpg", text: `Sometimes you need a little help from a friend to get back to where you belong. The End. Thank you for reading Mr. Coconut! SHARP Moon Studio 2026` }
+            { file: "Cover.jpg", audio: "page0.mp3", text: `Mr. Coconut. By Alejandro A. Luna. Illustrated by Dad.` },
+            { file: "2-3.jpg",audio: "page1.mp3", text: `In the middle of the big, blue ocean, on a teeny, tiny island, lived Mr. Coconut. His home was the tallest, curviest palm tree right on the edge of the sand.` },
+            { file: "4-5.jpg", audio: "page2.mp3", text: `Mr. Coconut's favorite thing in the whole world was sitting on the top branch. From up there, he could see the whales spouting and the clouds changing shape. He dreamed of sailing away on big adventures.`, sfx: 'whale.mp3' },
+            { file: "6-7.jpg", audio: "page3.mp3", text: `But one day, the wind didn't whisper. It HOWLED. The palm tree swung left. Then RIGHT.`, sfx: 'wind.mp3' },
+            { file: "8-9.jpg", audio: "page4.mp3", text: `WHOOOOOSH! Mr. Coconut lost his grip. BUMP! BUMP! THUMP! He landed upside down in the sand. "Oh, phooey," he sighed.`, sfx: 'thump.mp3', shake: true },
+            { file: "10-11.jpg", audio: "page5.mp3", text: `Mr. Coconut tried to climb the trunk. He took one step up. Sliiiide. Back down he went. The tree was too tall. The trunk was too slippery. He missed his view.` },
+            { file: "12-13.jpg", audio: "page6.mp3", text: `Just as a tear was forming in his eye, click-clack-click-clack. Out from a tide pool scuttled Ms. Kind-Crab. She was wearing a little piece of sea glass on her back like a backpack.`, sfx: 'crab.mp3' },
+            { file: "14-15.jpg", audio: "page7.mp3", text: `"Why the long face, Mr. Nut?" she asked. (She always got his name wrong). "I've fallen and I can't get back up," said Mr. Coconut. Ms. Kind-Crab snapped her claws. "I have an idea!"` },
+            { file: "16-17.jpg", audio: "page8.mp3", text: `Pinch. Ms. Kind-Crab grabbed a frond. Scuttle. She climbed up the tree sideways. Snip. She cut a long, strong vine.` },
+            { file: "18-19.jpg", audio: "page9.mp3", text: `She tied one end of the vine around Mr. Coconut's middle. She threw the other end over the highest branch. "Pull!" she shouted. Mr. Coconut pulled. Ms. Crab pulled. Slowly... slowly...` },
+            { file: "20-21.jpg", audio: "page10.mp3", text: `PLOP! Mr. Coconut landed right back on his favorite spot. The sea was still there. The sky was still there. But something felt different. Better.`, sfx: 'sparkle.mp3' },
+            { file: "22-23.jpg", audio: "page11.mp3", text: `Oh my," whispered Ms. Kind-Crab. "I've never seen the ocean from up here. It's... it's so big." Mr. Coconut smiled. "Would you like to stay and watch it with me?"` },
+            { file: "24-25.jpg", audio: "page12.mp3", text: `And so they sat. Mr. Coconut didn't just dream of adventures anymore. He dreamed of adventures with a friend. And that, he realized, was the very best kind of dream.` },
+            { file: "Back Cover.jpg", audio: "page13.mp3", text: `Sometimes you need a little help from a friend to get back to where you belong. The End. Thank you for reading Mr. Coconut! SHARP Moon Studio 2026` }
         ];
 
         let currentIndex = 0;
@@ -169,7 +169,7 @@
         document.getElementById('start-btn').addEventListener('click', () => {
             document.getElementById('splash').style.opacity = '0';
             setTimeout(() => document.getElementById('splash').style.display = 'none', 1200);
-            document.getElementById('ambient-loop').volume = 0.2;
+            document.getElementById('ambient-loop').volume = 0.1;
             document.getElementById('ambient-loop').play();
             renderPage();
         });
@@ -198,7 +198,7 @@
 
                 if(data.sfx) {
                     eventSfx.src = data.sfx;
-                    eventSfx.volume = 0.4;
+                    eventSfx.volume = 0.2;
                     eventSfx.play();
                 }
 
@@ -208,13 +208,29 @@
 
         function jumpToPage(idx) { currentIndex = idx; renderPage(); drawer.classList.remove('open'); }
 
-        function speak(text) {
-            const utterance = new SpeechSynthesisUtterance(text);
-            const bestVoice = voices.find(v => v.name.includes('Natural')) || voices.find(v => v.name.includes('Google US English'));
-            if (bestVoice) utterance.voice = bestVoice;
-            utterance.rate = 0.88;
-            setTimeout(() => synth.speak(utterance), 600);
-        }
+        // 1. Create a variable at the top to hold the current playing sound
+let narrationAudio = null;
+
+function speak() {
+    // 2. If a voice is already playing, stop it immediately
+    if (narrationAudio) {
+        narrationAudio.pause();
+        narrationAudio.currentTime = 0;
+    }
+
+    const data = bookData[currentIndex];
+
+    // 3. Play your professional MP3 file
+    if (data.audio) {
+        narrationAudio = new Audio(data.audio);
+        narrationAudio.volume = 1.0;
+
+        // 4. Wait 600ms (to let the 3D page flip finish) then start "Dad's" voice
+        setTimeout(() => {
+            narrationAudio.play().catch(e => console.log("Audio waiting for user click."));
+        }, 600);
+    }
+}
 
         // Interactivity
         document.getElementById('tap-right').addEventListener('click', () => { if (currentIndex < bookData.length - 1) { currentIndex++; renderPage('next'); } });
@@ -232,7 +248,7 @@
         const startAction = () => {
     document.getElementById('splash').style.opacity = '0';
     setTimeout(() => document.getElementById('splash').style.display = 'none', 1200);
-    document.getElementById('ambient-loop').volume = 0.2;
+    document.getElementById('ambient-loop').volume = 0.1;
     document.getElementById('ambient-loop').play();
     renderPage();
 };
