@@ -33,6 +33,26 @@
             overflow: hidden; transform-style: preserve-3d; transition: transform 0.8s cubic-bezier(0.15, 1, 0.3, 1);
         }
 
+        /* Position the CC button top-right */
+#cc-btn { 
+    bottom: auto; 
+    top: 30px; 
+    right: 30px; 
+    padding: 10px; 
+    width: 45px; 
+    height: 45px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* Visual cue when subtitles are ON */
+#cc-btn.active {
+    background: var(--accent);
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+} 
+
         /* Paper Grain Overlay */
         #book-frame::after {
             content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -114,6 +134,8 @@
 <body>
 
     <div id="print-ensemble" class="print-container"></div>
+
+    <div id="cc-btn" class="floating-ui" title="Toggle Subtitles">CC</div>
 
     <div id="splash">
         <h1 style="color: #2c3e50; font-size: 56px; margin-bottom: 10px;">Mr. Coconut</h1>
@@ -320,6 +342,39 @@
             }
             if (e.key === 'f' || e.key === 'F') document.getElementById('fullscreen-btn').click();
         });
+
+         // State management
+let subtitlesEnabled = true; // Start with subtitles ON
+const ccBtn = document.getElementById('cc-btn');
+const subtitleLayer = document.getElementById('subtitle-layer');
+
+// Initialize button state
+ccBtn.classList.add('active');
+
+const toggleCC = () => {
+    subtitlesEnabled = !subtitlesEnabled;
+    
+    if (subtitlesEnabled) {
+        subtitleLayer.style.opacity = '1';
+        ccBtn.classList.add('active');
+    } else {
+        subtitleLayer.style.opacity = '0';
+        ccBtn.classList.remove('active');
+    }
+};
+
+// Event Listeners for both Mouse and Touch
+ccBtn.addEventListener('click', toggleCC);
+ccBtn.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Prevents double-triggering on iPad
+    toggleCC();
+});
+
+// Keyboard Shortcut: Press "C" to toggle
+document.addEventListener('keydown', (e) => {
+    if (e.key.toLowerCase() === 'c') toggleCC();
+});
+
     </script>
 </body>
 </html>
